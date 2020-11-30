@@ -1,0 +1,67 @@
+html {
+    font-size: 150%;
+    font-weight: 300;
+    font-family: ;
+    line-height: 1.4;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    box-shadow: 2px 2px 25px 0 rgba(0, 0, 0, 0);
+    
+}
+
+.calculator__display {
+    width: 16.25rem;
+    padding: 0.75rem, 1rem;
+    text-align: right;
+    font-size: calc(1rem * 1.2 * 1.2);
+}
+
+.calculator__keys{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-areas: 
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal"
+    ;
+}
+
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.zero { grid-area: zero; }
+.equal { grid-area: equal; background-color: orange; }
+.decimal { grid-area: decimal; }
+
+.operator {
+    background: rgb(200, 200, 200);
+}
+
+.number:hover, .decimal:hover, .clear:hover{
+    background-color: rgb(161, 161, 161);
+    color: white;
+}
+
+.operator:hover{
+    background-color: rgb(247, 199, 127);
+}
+
+.equal:hover{
+    background-color: orangered;
+}
